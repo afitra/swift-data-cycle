@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @State var co: Int = 0
+    @ObservedObject var globalCount = GlobalObjectData()
     var body: some View {
         NavigationView(content: {
             
-            Layer1(count: $co)
+            Layer1(count: $co, globalCount : globalCount)
         })
         .ignoresSafeArea()
        
