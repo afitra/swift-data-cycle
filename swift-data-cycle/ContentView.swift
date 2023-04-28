@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var co: Int = 0
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        NavigationView(content: {
+            
+            Layer1(count: $co)
+        })
+        .ignoresSafeArea()
+       
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+
     static var previews: some View {
+ 
         ContentView()
     }
 }
