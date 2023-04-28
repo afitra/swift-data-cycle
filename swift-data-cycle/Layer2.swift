@@ -12,6 +12,10 @@ struct Layer2: View {
     @ObservedObject var globalCount : GlobalObjectData 
     var body: some View {
  
+        
+        
+        
+        
             VStack{
                 Spacer()
                 HStack{
